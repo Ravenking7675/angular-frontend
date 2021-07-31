@@ -1,0 +1,72 @@
+@use '../components/mixins' as *;
+@import '../custom';
+
+
+.display-2 {
+    margin-bottom: 1em;
+    text-transform: capitalize;
+
+    &--intro {
+        display: inline-block;
+        font-weight: 700;
+        color: $white;
+    }
+
+    &--description {
+        font-size: 1.5rem;
+        display: block;
+        margin-top: 1.2rem;
+        color: $white;
+        line-height: 1.5em ;
+        text-transform: none;
+    }
+}
+
+// HEADING LINE
+
+.heading-line::before {
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    margin: 0 auto;
+    background-color: $primary;
+}
+
+.heading-line::after{
+    content: "";
+    width: 2rem;
+    padding-top: 0.5rem;
+    height: 0.2rem;
+    margin: 0 auto;
+    margin-bottom : 1rem;
+    display: block;
+    background-color: $primary;
+}
+
+// Border Right
+
+.border-right {
+    border-right: 0.2rem solid $gray-300;
+    height : 100%;
+}
+
+.display-3 {
+    &--title {
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        display: inline-block;
+        background-image: linear-gradient(to right, $primary, $secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+
+// GRADIENT BG
+
+.gradient {
+    background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+}

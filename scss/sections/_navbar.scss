@@ -1,0 +1,50 @@
+@use '../components/mixins' as *;
+@import '../custom';
+
+.menu {
+    @include gradient;
+    .navbar-nav{
+        width: 100%;
+        display:flex;
+        justify-content:center;
+        transition: all 0.5s ease;
+
+    }
+    li{
+        padding: 0 0.7em;
+       
+        
+        a {
+            opacity: 50%;
+            color: #fff !important;
+            text-transform: capitalize;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: all 0.2s ease-out;
+        
+        &:hover {
+            font-size: 1.5em !important;
+            padding: 0 1.2rem;
+            text-shadow: 2px 2px #00aeff;
+            opacity: 100% !important;
+        }
+
+        
+    }
+    a.active {
+        opacity: 100% !important;
+    }
+    }
+}    
+
+@media only screen and (max-width: 1000px) {
+    .navbar-nav {
+        transform: translateY(-50em);
+    }
+  }
+
+  @media only screen and (max-width: 995px) {
+    .navbar-nav {
+        transform: translateY(0%);
+    }
+  }

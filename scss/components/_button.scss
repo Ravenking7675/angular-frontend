@@ -1,0 +1,65 @@
+@use '../components/mixins' as *;
+@import '../custom';
+
+
+.btn-rounded {
+    position: relative;
+    padding: 0.9375em 4.375em 0.9375em 1.25em;
+    font-weight: 500;
+    margin: 0;
+    margin-right: 2em;
+    width: 16em;
+    border: 0.1em solid rgba($white, 0.6);
+    background-color: $white;
+    transition: all 0.5s ease;
+
+    span.call-icon {
+        position: absolute;
+        background-color: $primary;
+        width: 2.5em;
+        height: 2.5em;
+
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: 3px solid #FFF;
+        box-shadow: 0 0 2px #888;
+        
+        
+        i{
+   
+            color: $white;
+            font-size: 1rem;
+            line-height: 2.1em;  
+        }
+    }
+
+    &:hover { 
+        @include gradient;
+        color: $white;
+
+        span.call-icon {
+            background-color:rgba($black, 0.6);
+        }
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1600px) {
+    .btn-rounded {
+        width: 18em; 
+    }
+  }
+
+  @media only screen and (max-width: 1124px) {
+    .btn-rounded {
+        background-color: none;
+        width:18em;
+        transform: translateX(100em);
+        overflow-x: hidden;
+    }
+  }
+

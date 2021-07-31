@@ -1,0 +1,57 @@
+
+//IMPORT COMPONENTS
+
+@use 'components/animations';
+@use 'components/button';
+@use 'components/mixins';
+@use 'components/typography';
+
+//IMPORT SECTIONS
+
+@use 'sections/navbar';
+@use 'sections/companies';
+@use 'sections/faq'; 
+@use 'sections/footer';
+@use 'sections/get-started';
+@use 'sections/intro-section';
+@use 'sections/portfolio';
+@use 'sections/services';
+@use 'sections/testimonials';  
+
+@import './custom';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.logo {
+    letter-spacing: 0.15em;
+    color: #f6e7f8;
+    text-shadow: 2px 2px 8px #f6e7f8;
+    padding-left: 50px;
+    transition: all 0.5s ease;
+
+    &:hover{ 
+        letter-spacing: 0em;
+    }
+
+}
+
+.row{
+    padding: 0 2rem;
+}
+
+.intros{
+    padding:0 2rem;
+}
+@media only screen and (max-width: 530px) {
+    .logo {
+        margin-left: 2.5em;
+    }
+  }
+
+//   html {
+//     scroll-behavior: smooth;
+//   }
